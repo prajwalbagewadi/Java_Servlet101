@@ -5,6 +5,7 @@ import jakarta.servlet.http.HttpServletRequest; //for HttpServletRequest,
 import jakarta.servlet.http.HttpServletResponse; //for HttpServletResponse
 import jakarta.servlet.ServletException; //for ServletException
 import java.io.IOException;
+import jakarta.servlet.annotation.WebServlet;
 /*
  * A Servlet is a Java class that runs on a web server 
  * and handles HTTP requests/responses. 
@@ -25,6 +26,7 @@ import java.io.IOException;
  * Jakarta Servlets are part of Jakarta EE 
  * and run in a Servlet container like Tomcat 10+.
  */
+@WebServlet("/main")//The annotation @WebServlet("/main") is used to register your servlet and map it to a URL so that it can be accessed by a browser or client.
 //Extend BaseClass
 public class Main extends HttpServlet{
 	// This method handles GET requests 

@@ -1,0 +1,22 @@
+<!--
+This file is a deployment descriptor for a Java web application. Specifically, it configures servlet settings for the application server (like Tomcat, Jetty, etc.).
+
+It declares a servlet named Main and specifies the fully qualified class that implements it (pack.Main).
+
+It maps this servlet to a URL pattern /main, so when the user accesses http://yourserver/context/main, the Main servlet will handle the request.
+
+
+-->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="4.0">
+    <!-- Define a servlet named 'Main' -->
+    <servlet>
+        <servlet-name>Main</servlet-name> <!-- Logical name for the servlet -->
+        <servlet-class>pack.Main</servlet-class> <!-- Full class path of the servlet -->
+    </servlet>
+    
+    <!-- Map the servlet 'Main' to the URL pattern '/main' -->
+    <servlet-mapping>
+        <servlet-name>Main</servlet-name> <!-- Refers to the servlet defined above -->
+        <url-pattern>/main</url-pattern> <!-- URL endpoint triggering this servlet -->
+    </servlet-mapping>
+</web-app>
